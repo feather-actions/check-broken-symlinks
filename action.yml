@@ -1,0 +1,15 @@
+name: 'Check Broken Symlinks'
+description: 'Runs a script to check for broken symlinks within a Git repository'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: run script
+      shell: bash
+      run: |
+        chmod -R oug+x ${{github.action_path}}/check-broken-symlinks.sh
+        ${{github.action_path}}/check-broken-symlinks.sh
+
+branding:
+  icon: 'server'
+  color: 'green'
