@@ -5,7 +5,7 @@ This GitHub Action checks for broken symlinks within a Git repository. If any br
 Include the action in your workflow.
 
 ```yaml
-- uses: feather-actions/check-broken-symlinks@0.0.1
+- uses: feather-actions/check-broken-symlinks@0.0.2
 ```
 Full example:
 
@@ -23,5 +23,5 @@ jobs:
           fetch-depth: 1
   
       - name: Check Broken Symlinks
-        uses: feather-actions/check-broken-symlinks@0.0.1
+        uses: feather-actions/check-broken-symlinks@0.0.2
 ```
